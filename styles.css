@@ -19,7 +19,8 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'MedievalSharp', cursive;
+    font-family: 'Roboto', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -52,9 +53,10 @@ table {
     height: auto;
   }
   
+
 /* Custom Styles */
 
-main{
+main, .carousel-container{
     position: relative;
     vertical-align: middle;
     margin: auto;
@@ -90,19 +92,42 @@ nav ul a{
     color: black;
 }
 
+
 nav.flex-row {
     justify-content: space-between;
     align-items: center;
+    height: 60px;
+}
+
+.icon{
+    width: 5em;
+}
+
+.home{
+    font-weight: bolder;
 }
 
 i.fa-search, i.fa-circle-half-stroke{
     height: auto;
+    padding: .5em;
+}
+
+
+i.fa-search{
+    box-sizing: border-box;
+    height: auto;
+    padding: 1em;
+    margin: 0;
+    color: white;
+    background-color: rgb(0,176,240);
+    border-radius: 15%;
 }
 
 button{
     height: auto;
     background-color: white;
     border: none;
+    padding: 0;
 }
 
 #searchForm > *{
@@ -111,6 +136,10 @@ button{
 
 #search{
     background-color: rgb(248,248,248);
+    padding-left: .5em;
+    border-radius: 5%;
+    border-bottom: none;
+    margin: 0;
 }
 
 #search::placeholder{
@@ -119,7 +148,7 @@ button{
 
 
 
-/* Image Carousel */
+/* Materialize Image Carousel */
 
 .carousel{
     position: relative;
@@ -128,6 +157,7 @@ button{
     height: 600px;
     perspective: 600px;
 }
+
 
 .carousel .carousel-item{
     width: 600px;
@@ -161,7 +191,6 @@ button{
 }
 
 .carousel .carousel-item h4{
-    background-color: black;
     color: rgba(255, 255, 255, 0.75);
     margin: 2.5em;
     padding: 10px 5px;
@@ -215,4 +244,47 @@ button{
     background: linear-gradient(270deg,rgb(255 255 255/0%) 0%,rgb(255 255 255/39%) 19%,rgb(255 255 255) 20%);
     height: 600px;
     width: 25vw;
+}
+
+.fade-left-minor{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(270deg,rgb(255 255 255/0%) 0%,rgb(255 255 255/39%) 19%,rgb(255 255 255) 20%);
+    height: 600px;
+    width: 15vw;
+}
+
+.fade-right-minor{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+    background: linear-gradient(270deg,rgb(255 255 255/0%) 0%,rgb(255 255 255/39%) 19%,rgb(255 255 255) 20%);
+    height: 600px;
+    width: 15vw;
+}
+
+/* Swiper.Js Image Carousel */
+
+.vid-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vid-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.vid-image .vid-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }

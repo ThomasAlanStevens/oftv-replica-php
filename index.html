@@ -5,6 +5,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="styles.css">
@@ -13,14 +16,16 @@
     </head>
 
     <body>
-        <header>
+
+        <!-- OF.TV Header -->
+        <header id="top">
             <nav class="flex-row">
                 <section>
                     <ul class="flex-row">
-                        <li><a href="#">Icon</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Creators</a></li>
-                        <li><a href="#">Get the app</a></li>
+                        <li><a href="https://of.tv/"><img class="icon" src="oftvIcon.png" alt="OF.TV Icon"></a></li>
+                        <li><a class="home" href="#top">Home</a></li>
+                        <li><a href="https://of.tv/creators/">Creators</a></li>
+                        <li><a href="https://of.tv/download/">Get the app</a></li>
                     </ul>
                 </section>
                 <section>
@@ -28,7 +33,7 @@
                         <li>
                             <form class="flex-row" action="#" id="searchform" method="get">
                                 <input type="text" id="search" name="search" placeholder="Search">
-                                <button><i class="fa fa-search"></i></button>
+                                <button class="search-button"><i class="fa fa-search"></i></button>
                             </form>
                         </li>
                         <li><button dark-mode><i class="fa-solid fa-circle-half-stroke"></i></button></li>
@@ -36,9 +41,11 @@
                 </section>
             </nav>
         </header>
+
+        <!-- Main Video Display Section Using Materialize-->
         <main>
             <div class="fade-left"></div>
-            <section class="carousel">
+            <section id="carousel" class="carousel">
                 <div class="carousel-item">
                     <section>
                         <img src="placeholder.jpg" alt="">
@@ -77,77 +84,28 @@
             <button class="carousel-button prev" data-carousel-button-prev><</button>
             <button class="carousel-button next" data-carousel-button-next>></button>
         </main>
-        
-        
 
-        <!-- <main class="carousel" data-carousel> -->
-            <!-- <button class="carousel-button prev" data-carousel-button = 'prev'><</button>
-            <button class="carousel-button next" data-carousel-button = 'next'>></button>
-            <ul class="flex-row" data-slides>
-                <li class="slide" data-active><img src="/placeholder.jpg" alt=""></li>
-                <li class="slide"><img src="/placeholder2.jpg" alt=""></li>
-                <li class="slide"><img src="/placeholder3.jpg" alt=""></li>
-                <li class="slide"><img src="/placeholder.jpg" alt=""></li>
-                <li class="slide"><img src="/placeholder2.jpg" alt=""></li>
-                <li class="slide"><img src="/placeholder3.jpg" alt=""></li>
-            </ul> -->
-        <!-- </main>
 
-        <section>
-            <ul class="flex-row">
-                <li></li>
-            </ul>
-        </section>
-
-        <section>
-            <ul class="flex-row">
-                <li></li>
-            </ul>
-        </section>
-
-        <section>
-            <ul class="flex-row">
-                <li></li>
-            </ul>
-        </section>
-
-        <footer>
-            <section class="flexrow">
-                <section class="flex col">
-                    <img src="" alt="">
-                    <span><a href=""></a></span>
-                </section>
-                <section class="flex col">
-                    <h3></h3>
-                    <ul class="flexrow">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </section>
-                <section class="flex col">
-                    <h4></h4>
-                    <span><a href=""></a></span>
-                </section>
+        <!-- Other Videos Of Different Categories Using Swiper.js -->
+        <section class="slide-container">
+            <section class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <section class="vid-content">
+                            <span class="overlay"></span>
+                            <div class="vid-image"><img src="placeholder.jpg" alt="" class="vid-img"></div>
+                        </section>
+                    </div>
+                </div>
             </section>
-            <small class="flexrow">
-                &copy;
-                <span> 2022 OFTV|</span>
-                <span><a href="">Privacy Policy</a></span>
-            </small>
-        </footer> -->
-        <!-- <script src="script.js"></script> -->
+        </section>
+
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                $('.carousel').carousel({
-                    numVisible: 3,
+                $('#carousel').carousel({
+                    numVisible: 5,
                 });
             });
             setInterval(function(){
