@@ -19,23 +19,10 @@ $('.prev').click(function(){
 
 // Swiper Initialization
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 0,
+    slidesPerView: 5,
+    spaceBetween: 6,
+    slidesPerGroup: 1,
     loop: true,
-    breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 0,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 0,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 0,
-        },
-      },
     loopFillGroupWithBlank: true,
     navigation: {
       nextEl: ".swiper-button-next",
