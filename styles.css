@@ -19,8 +19,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'MedievalSharp', cursive;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'roboto', 'helveticaneue', 'helvetica neue', 'helvetica-neue', Helvetica, Arial, sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -64,9 +63,9 @@ body {
 
 body {
     background: white;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'roboto', 'helveticaneue', 'helvetica neue', 'helvetica-neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
-    color: #000;
+    color: #242529;
     margin: 0;
     padding: 0;
 }
@@ -87,7 +86,7 @@ body {
 /* Header */
 
 header{
-    max-width: 1600px;
+    max-width: 1280px;
     width: 90%;
     margin: auto;
 }
@@ -97,8 +96,19 @@ nav{
     box-shadow: none;
 }
 
+nav *{
+    cursor: pointer;
+}
+
 nav ul a{
-    color: black;
+    color: #242529;
+    font-size: 15px;
+    padding: 10px;
+}
+
+nav ul a:hover{
+    color: #696b75;
+    background-color: white;
 }
 
 
@@ -109,7 +119,8 @@ nav.flex-row {
 }
 
 .icon{
-    width: 5em;
+    margin-top: 25px;
+    width: 4em;
 }
 
 .home{
@@ -121,6 +132,14 @@ i.fa-search, i.fa-circle-half-stroke{
     padding: .5em;
 }
 
+i.fa-search:hover{
+    background-color: rgb(2, 124, 168);
+}
+
+i.fa-circle-half-stroke:hover{
+    filter: contrast(0);
+}
+
 
 i.fa-search{
     box-sizing: border-box;
@@ -129,6 +148,7 @@ i.fa-search{
     margin: 0;
     color: white;
     background-color: rgb(0,176,240);
+    transition: background-color .5s;
     border-radius: 15%;
 }
 
@@ -148,6 +168,7 @@ button{
     padding-left: .5em;
     border-radius: 5%;
     border-bottom: none;
+    box-shadow: none;
     margin: 0;
 }
 
@@ -325,11 +346,11 @@ main .carousel .carousel-item{
     position: relative;
 }
 
-.swiper-button-next{
+[class^=swiper-button-next]{
     margin-right: 20%;
 }
 
-.swiper-button-prev{
+[class^=swiper-button-prev]{
     margin-left: 20%;
 }
 

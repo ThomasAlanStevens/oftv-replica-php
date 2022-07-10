@@ -21,13 +21,34 @@ $('.prev').click(function(){
 })
 
 // Swiper Initialization
-var swiper = new Swiper(".mySwiper", {
+var swiper1 = new Swiper(".mySwiper", {
     spaceBetween: 6,
     slidesPerGroup: 1,
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".next1",
+      prevEl: ".prev1",
+    },
+    breakpoints: {
+        1400: {
+            slidesPerView: 5,
+        },
+        700: {
+            slidesPerView: 3,
+        },
+        400: {
+            slidesPerView: 1,
+        },
+    }
+  });
+
+  var swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 6,
+    slidesPerGroup: 1,
+    loop: true,
+    navigation: {
+      nextEl: ".next2",
+      prevEl: ".prev2",
     },
     breakpoints: {
         1400: {
