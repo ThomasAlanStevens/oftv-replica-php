@@ -3,11 +3,14 @@ $(document).ready(function(){
     $('#carousel').carousel({
         numVisible: 3,
         duration: 100,
+        padding: 300,
+        dist:-100,
+        shift: -100,
     });
 });
 setInterval(function(){
     $('.carousel').carousel('next');
-}, 100000)
+}, 10000)
 
 $('.next').click(function(){
     $('.carousel').carousel('next')
@@ -19,14 +22,22 @@ $('.prev').click(function(){
 
 // Swiper Initialization
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
     spaceBetween: 6,
     slidesPerGroup: 1,
     loop: true,
-    loopFillGroupWithBlank: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        1400: {
+            slidesPerView: 5,
+        },
+        700: {
+            slidesPerView: 3,
+        },
+        400: {
+            slidesPerView: 1,
+        },
+    }
   });
-
