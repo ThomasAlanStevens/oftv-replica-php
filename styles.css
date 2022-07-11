@@ -64,6 +64,26 @@ body {
     padding: 0;
 }
 
+.minor-h-padding{
+    padding: 0 1em;
+}
+
+.minor-v-padding{
+    padding: 1em 0;
+}
+
+.major-h-padding{
+    padding: 0 1.5em;
+}
+
+.major-v-padding{
+    padding: 1.5em 0;
+}
+
+button:focus{
+    background-color: white;
+}
+
 /* Flex Styles */
 
 .flex-row{
@@ -476,10 +496,6 @@ footer{
     background-color: rgb(36,37,41);
 }
 
-footer section > *{
-    padding-top: 15px;
-}
-
 footer section.flex-row{
     width: 100%;
     justify-content: space-evenly;
@@ -490,6 +506,15 @@ footer h5{
     font-weight: 200;
 }
 
-footer small{
-    transform: translateX(-12%);
+footer .center{
+    margin-left: 80px;
+}
+
+footer .footer-nav{
+    color: white;
+}
+
+footer a:hover{
+    filter: brightness(.8);
+    text-decoration: underline;
 }
