@@ -63,10 +63,11 @@ body {
 
 body {
     background: white;
+    max-width: 90%;
     font-family: 'roboto', 'helveticaneue', 'helvetica neue', 'helvetica-neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #242529;
-    margin: 0;
+    margin: auto;
     padding: 0;
 }
 
@@ -270,10 +271,16 @@ main .carousel .carousel-item{
     right: .1em;
     transition: right .1s;
 }
+
 .carousel-button.next:hover{
     background-color: white;
     right: 0em;
 }
+
+.carousel-button:focus{
+    background-color: none;
+}
+
 
 .carousel-button.prev:hover{
     background-color: white;
@@ -287,7 +294,7 @@ main .carousel .carousel-item{
     z-index: 2;
     background: linear-gradient(270deg,rgb(255 255 255/0%) 0%,rgb(255 255 255/39%) 19%,rgb(255 255 255) 20%);
     height: 350px;
-    width: 28vw;
+    width: 24vw;
 }
 
 .fade-right{
@@ -298,7 +305,7 @@ main .carousel .carousel-item{
     transform: rotate(180deg);
     background: linear-gradient(270deg,rgb(255 255 255/0%) 0%,rgb(255 255 255/38%) 19%,rgb(255 255 255) 20%);
     height: 350px;
-    width: 28vw;
+    width: 24vw;
 }
 
 
@@ -380,11 +387,11 @@ main .carousel .carousel-item{
 }
 
 [class^=swiper-button-next]{
-    margin-right: 20%;
+    margin-right: 15%;
 }
 
 [class^=swiper-button-prev]{
-    margin-left: 20%;
+    margin-left: 15%;    
 }
 
 .category{
@@ -407,8 +414,8 @@ main .carousel .carousel-item{
     left: 0;
     top: 0;
     z-index: 2;
-    background: linear-gradient(270deg, rgb(255 255 255/0%) 0%,rgb(255 255 255/39%) 5%,rgb(255 255 255) 20%);
-    height: 600px;
+    background: linear-gradient(270deg, rgb(255 255 255/0%) 0%,rgb(255 255 255/39%) 20%,rgb(255 255 255) 40%);
+    height: 25vh;
     width: 20vw;
 }
 
@@ -418,7 +425,7 @@ main .carousel .carousel-item{
     top: 0;
     z-index: 2;
     transform: rotate(180deg);
-    background: linear-gradient(270deg,rgb(255 255 255/0%) 0%,rgb(255 255 255/39%) 5%,rgb(255 255 255) 20%);
-    height: 600px;
+    background: linear-gradient(270deg,rgb(255 255 255/0%) 0%,rgb(255 255 255/39%) 20%,rgb(255 255 255) 40%);
+    height: 25vh;
     width: 20vw;
 }
