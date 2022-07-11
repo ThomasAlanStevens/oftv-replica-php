@@ -209,14 +209,6 @@ main .carousel .carousel-item{
     opacity: 1 !important;
 }
 
-.carousel .carousel-item{
-    width: 600px;
-    height: 337.5px;
-    filter: brightness(.5);
-    -webkit-transition : -webkit-filter 300ms linear;
-    opacity: 1 !important;
-}
-
 .carousel .carousel-item.active{
     filter: brightness(1);
 }
@@ -231,21 +223,52 @@ main .carousel .carousel-item{
 }
 
 .carousel .carousel-item h3{
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
     color: white;
-    margin: -2.5em 0;
-    padding: 10px 5px;
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.25em;
+}
+
+.carousel .carousel-item h3:hover{
+    transform:scale3d(1.1,1.1,1.1);
+    text-shadow: 3px 3px 3px black;
 }
 
 .carousel .carousel-item h4{
+    position: absolute;
+    bottom: 2%;
+    left: 15%;
     color: rgba(255, 255, 255, 0.75);
-    margin: 2.5em;
-    padding: 10px 5px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
+
+.carousel .carousel-item h4:hover{
+    color: white;
+}
+
+.carousel .carousel-item div img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 2%;
+    left: 3%;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    font-size: 1.75em;
+    border: solid 1px white;
+}
+
+.carousel .carousel-item div img:hover{
+    border: solid 1px rgb(0,175,240);
+}
+
+
 
 .carousel-button{
     position: absolute;
@@ -261,13 +284,13 @@ main .carousel .carousel-item{
     padding: 0 .5rem;
 }
 .carousel-button.prev{
-    margin-left: 20%;
+    margin-left: 15%;
     left: .1em;
     transition: left .1s;
 }
 
 .carousel-button.next{
-    margin-right: 20%;
+    margin-right: 15%;
     right: .1em;
     transition: right .1s;
 }
@@ -278,7 +301,7 @@ main .carousel .carousel-item{
 }
 
 .carousel-button:focus{
-    background-color: none;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 
@@ -384,6 +407,14 @@ main .carousel .carousel-item{
 
 .swiper-container{
     position: relative;
+}
+
+[class^=swiper-button-next]{
+    margin-right: 15%;
+}
+
+[class^=swiper-button-prev]{
+    margin-left: 15%;    
 }
 
 [class^=swiper-button-next]{

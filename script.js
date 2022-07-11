@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 setInterval(function(){
     $('.carousel').carousel('next');
-}, 10000)
+}, 1000000)
 
 $('.next').click(function(){
     $('.carousel').carousel('next')
