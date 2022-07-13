@@ -102,21 +102,29 @@ tag.src = "//www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player;
+// Change this to make a list of var players with as many as there are videos in iframe, then use it to make the function below work
+let players = [];
 
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('vid1', {
-        events: {
-            'onReady': onPlayerReady
-        }
-    });
+    let videos = document.querySelectorAll('iframe')
+    
+    for(let i = 0; i < videos.length; i++){
+        videos[i].id = `vid-${i}`
+        players[i] = new YT.Player(`${videos[i].id}`, {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+        console.log(videos)
+    }
 }
+
+// Change this to mute every player
 
 function onPlayerReady(event) {
-    player.mute();
+    for(let i = 0; i < players.length; i++){
+        players[i].mute()
+    }
 }
-
-// Hides info on hover during play
-
 
 
