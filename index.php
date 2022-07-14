@@ -128,7 +128,8 @@
                         $resultCheck = mysqli_num_rows($result);
                         if($resultCheck > 0){
                             while($row = mysqli_fetch_assoc($result)){
-                                echo "<div class=\"swiper-slide\">
+                                if($row['creator'] == 'BoBurnham'){
+                                    echo "<div class=\"swiper-slide\">
                                     <figure>
                                         <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
                                     </figure>
@@ -141,8 +142,44 @@
                                     </div>
                                     <div class=\"fade-bottom\"></div>
                                 </div>";
-                            }
-                        }
+                                };
+                            };
+                        };
+                    ?>
+                </div>
+            <div class="swiper-button-next next1"></div>
+            <div class="swiper-button-prev prev1"></div>
+            <div class="fade-right-minor"></div>
+        </section>
+
+        <section class="swiper-container">
+            <h2 class="category"><a href="https://of.tv/">Bo Burnham</a></h2>
+            <div class="swiper mySwiper">
+                <div class="fade-left-minor"></div>
+                <div class="swiper-wrapper">
+                    <?php
+                        $sql = "SELECT * FROM video_info;";
+                        $result = mysqli_query($conn, $sql);
+                        $resultCheck = mysqli_num_rows($result);
+                        if($resultCheck > 0){
+                            while($row = mysqli_fetch_assoc($result)){
+                                if($row['creator'] == 'BoBurnham'){
+                                    echo "<div class=\"swiper-slide\">
+                                    <figure>
+                                        <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+                                    </figure>
+                                    <div class=\"vid-info\">
+                                        <h3>$row[title]</h3>
+                                        <div class=\"flex-row space-between\">
+                                            <h4 class=\"content-creator\">$row[creator]</h4>
+                                            <h5>Time</h5>
+                                        </div>
+                                    </div>
+                                    <div class=\"fade-bottom\"></div>
+                                </div>";
+                                };
+                            };
+                        };
                     ?>
                 </div>
             <div class="swiper-button-next next1"></div>
