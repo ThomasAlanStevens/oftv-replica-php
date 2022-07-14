@@ -97,12 +97,10 @@ function stopVideo(){
 
 // Mutes all videos on played during hover
 var tag = document.createElement('script');
-
 tag.src = "//www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// Change this to make a list of var players with as many as there are videos in iframe, then use it to make the function below work
 let players = [];
 
 function onYouTubeIframeAPIReady() {
@@ -118,8 +116,6 @@ function onYouTubeIframeAPIReady() {
         console.log(videos)
     }
 }
-
-// Change this to mute every player
 
 function onPlayerReady(event) {
     for(let i = 0; i < players.length; i++){
