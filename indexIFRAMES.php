@@ -52,6 +52,7 @@
 
         <!-- Main Video Display Using Materialize-->
         <main>
+        
             <div class="fade-left"></div>
             <section id="carousel" class="carousel">
                 <?php
@@ -94,7 +95,9 @@
                             while($row = mysqli_fetch_assoc($result)){
                                 if($row['creator'] == 'BoBurnham'){
                                     echo "<div class=\"swiper-slide\">
-                                    <a href=\"$row[link]\"><img src=\"$row[thumbnail]\" alt=\"#\"></a>
+                                    <figure>
+                                        <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+                                    </figure>
                                     <div class=\"vid-info\">
                                         <h3>$row[title]</h3>
                                         <div class=\"flex-row space-between\">
