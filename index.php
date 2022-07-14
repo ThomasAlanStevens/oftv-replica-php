@@ -61,13 +61,15 @@
                     if($resultCheck > 0){
                         while($row = mysqli_fetch_assoc($result)){
                             echo "<div class=\"carousel-item\">
-                            <figure>
-                                <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
-                            </figure>
+                            <a href=\"$row[watch]\">
+                                <figure>
+                                    <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+                                </figure>
+                            </a>
                             <div>
-                                <img src=\"$row[icon]\" alt=\"\">
-                                <h3>$row[title]</h3>
-                                <h4>$row[creator]</h4>
+                                <a href=\"$row[channel]\"><img src=\"$row[icon]\" alt=\"\"></a>
+                                <a href=\"$row[watch]\"><h3>$row[title]</h3></a>
+                                <a href=\"$row[channel]\"><h4>$row[creator]</h4></a>
                             </div>
                         </div>";
                         }
@@ -96,10 +98,10 @@
                                     echo "<div class=\"swiper-slide\">
                                     <a href=\"$row[link]\"><img src=\"$row[thumbnail]\" alt=\"#\"></a>
                                     <div class=\"vid-info\">
-                                        <h3>$row[title]</h3>
+                                        <a href=\"$row[watch]\"><h3>$row[title]</h3></a>
                                         <div class=\"flex-row space-between\">
-                                            <h4 class=\"content-creator\">$row[creator]</h4>
-                                            <h5>Time</h5>
+                                        <a href=\"$row[channel]\"><h4 class=\"content-creator\">$row[creator]</h4></a>
+                                            <h5 class=\"video-time\">Time</h5>
                                         </div>
                                     </div>
                                     <div class=\"fade-bottom\"></div>
@@ -129,10 +131,10 @@
                                     echo "<div class=\"swiper-slide\">
                                     <a href=\"$row[link]\"><img src=\"$row[thumbnail]\" alt=\"#\"></a>
                                     <div class=\"vid-info\">
-                                        <h3>$row[title]</h3>
+                                        <a href=\"$row[watch]\"><h3>$row[title]</h3></a>
                                         <div class=\"flex-row space-between\">
-                                            <h4 class=\"content-creator\">$row[creator]</h4>
-                                            <h5>Time</h5>
+                                        <a href=\"$row[channel]\"><h4 class=\"content-creator\">$row[creator]</h4></a>
+                                            <h5 class=\"video-time\">Time</h5>
                                         </div>
                                     </div>
                                     <div class=\"fade-bottom\"></div>
@@ -162,10 +164,10 @@
                                     echo "<div class=\"swiper-slide\">
                                     <a href=\"$row[link]\"><img src=\"$row[thumbnail]\" alt=\"#\"></a>
                                     <div class=\"vid-info\">
-                                        <h3>$row[title]</h3>
+                                        <a href=\"$row[watch]\"><h3>$row[title]</h3></a>
                                         <div class=\"flex-row space-between\">
-                                            <h4 class=\"content-creator\">$row[creator]</h4>
-                                            <h5>Time</h5>
+                                        <a href=\"$row[channel]\"><h4 class=\"content-creator\">$row[creator]</h4></a>
+                                            <h5 class=\"video-time\">Time</h5>
                                         </div>
                                     </div>
                                     <div class=\"fade-bottom\"></div>
@@ -195,10 +197,10 @@
                                     echo "<div class=\"swiper-slide\">
                                     <a href=\"$row[link]\"><img src=\"$row[thumbnail]\" alt=\"#\"></a>
                                     <div class=\"vid-info\">
-                                        <h3>$row[title]</h3>
+                                        <a href=\"$row[watch]\"><h3>$row[title]</h3></a>
                                         <div class=\"flex-row space-between\">
-                                            <h4 class=\"content-creator\">$row[creator]</h4>
-                                            <h5>Time</h5>
+                                        <a href=\"$row[channel]\"><h4 class=\"content-creator\">$row[creator]</h4></a>
+                                            <h5 class=\"video-time\">Time</h5>
                                         </div>
                                     </div>
                                     <div class=\"fade-bottom\"></div>
