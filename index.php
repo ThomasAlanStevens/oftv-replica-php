@@ -23,17 +23,6 @@
         <title>OFTV</title>
     </head>
 
-    <?php
-        $sql = "SELECT * FROM video_info;";
-        $result = mysqli_query($conn, $sql);
-        $resultCheck = mysqli_num_rows($result);
-        if($resultCheck > 0){
-            while($row = mysqli_fetch_assoc($result)){
-                echo $row['title'] . "<br>";
-            }
-        }
-    ?>
-
     <body>
 
         <!-- OF.TV Header -->
@@ -63,66 +52,28 @@
 
         <!-- Main Video Display Using Materialize-->
         <main>
+        
             <div class="fade-left"></div>
             <section id="carousel" class="carousel">
-                <div class="carousel-item">
-                    <figure>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1lDYSpmdLzM?controls=0&autoplay=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </figure>
-                    <div>
-                        <img src="headshot.png" alt="">
-                        <h3>Video Title</h3>
-                        <h4>Content Creator</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <figure>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kuGxRbY_wHs?controls=0&autoplay=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </figure>
-                    <div>
-                        <img src="headshot.png" alt="">
-                        <h3>Video Title</h3>
-                        <h4>Content Creator</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <figure>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5STrZB6sm00?controls=0&autoplay=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </figure>
-                    <div>
-                        <img src="headshot.png" alt="">
-                        <h3>Video Title</h3>
-                        <h4>Content Creator</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ltfULo-LNNA?controls=0&autoplay=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div>
-                        <img src="headshot.png" alt="">
-                        <h3>Video Title</h3>
-                        <h4>Content Creator</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <figure>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GxD7NyWHQe4?controls=0&autoplay=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </figure>
-                    <div>
-                        <img src="headshot.png" alt="">
-                        <h3>Video Title</h3>
-                        <h4>Content Creator</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <figure>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/7vj4HLszl4w?controls=0&autoplay=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </figure>
-                    <div>
-                        <img src="headshot.png" alt="">
-                        <h3>Video Title</h3>
-                        <h4>Content Creator</h4>
-                    </div>
-                </div>
+                <?php
+                    $sql = "SELECT * FROM video_info;";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
+                    if($resultCheck > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "<div class=\"carousel-item\">
+                            <figure>
+                                <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+                            </figure>
+                            <div>
+                                <img src=\"$row[icon]\" alt=\"\">
+                                <h3>$row[title]</h3>
+                                <h4>$row[creator]</h4>
+                            </div>
+                        </div>";
+                        }
+                    }
+                ?>
             </section>
             <div class="fade-right"></div>
             <button class="carousel-button prev" data-carousel-button-prev><</button>
@@ -132,75 +83,34 @@
         <!-- Swiper Categories Video Display Section -->
         
         <section class="swiper-container">
-            <h2 class="category"><a href="https://of.tv/">Category + Link</a></h2>
+            <h2 class="category"><a href="https://of.tv/">Bo Burnham</a></h2>
             <div class="swiper mySwiper">
                 <div class="fade-left-minor"></div>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
+                    <?php
+                        $sql = "SELECT * FROM video_info;";
+                        $result = mysqli_query($conn, $sql);
+                        $resultCheck = mysqli_num_rows($result);
+                        if($resultCheck > 0){
+                            while($row = mysqli_fetch_assoc($result)){
+                                if($row['creator'] == 'BoBurnham'){
+                                    echo "<div class=\"swiper-slide\">
+                                    <figure>
+                                        <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+                                    </figure>
+                                    <div class=\"vid-info\">
+                                        <h3>$row[title]</h3>
+                                        <div class=\"flex-row space-between\">
+                                            <h4 class=\"content-creator\">$row[creator]</h4>
+                                            <h5>Time</h5>
+                                        </div>
+                                    </div>
+                                    <div class=\"fade-bottom\"></div>
+                                </div>";
+                                };
+                            };
+                        };
+                    ?>
                 </div>
             <div class="swiper-button-next next1"></div>
             <div class="swiper-button-prev prev1"></div>
@@ -208,160 +118,38 @@
         </section>
 
         <section class="swiper-container">
-            <h2 class="category"><a href="https://of.tv/">Category + Link</a></h2>
-            <div class="swiper mySwiper2">
+            <h2 class="category"><a href="https://of.tv/">Bo Burnham</a></h2>
+            <div class="swiper mySwiper">
                 <div class="fade-left-minor"></div>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
+                    <?php
+                        $sql = "SELECT * FROM video_info;";
+                        $result = mysqli_query($conn, $sql);
+                        $resultCheck = mysqli_num_rows($result);
+                        if($resultCheck > 0){
+                            while($row = mysqli_fetch_assoc($result)){
+                                echo "<div class=\"swiper-slide\">
+                                    <figure>
+                                        <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+                                    </figure>
+                                    <div class=\"vid-info\">
+                                        <h3>$row[title]</h3>
+                                        <div class=\"flex-row space-between\">
+                                            <h4 class=\"content-creator\">$row[creator]</h4>
+                                            <h5>Time</h5>
+                                        </div>
+                                    </div>
+                                    <div class=\"fade-bottom\"></div>
+                                </div>";
+                            }
+                        }
+                    ?>
                 </div>
-                </div>
-            </div>
-            <div class="swiper-button-next next2"></div>
-            <div class="swiper-button-prev prev2"></div>
+            <div class="swiper-button-next next1"></div>
+            <div class="swiper-button-prev prev1"></div>
             <div class="fade-right-minor"></div>
         </section>
 
-        <section class="swiper-container">
-            <h2 class="category"><a href="https://of.tv/">Category + Link</a></h2>
-            <div class="swiper mySwiper2">
-                <div class="fade-left-minor"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="placeholder.jpg" alt="#">
-                        <div class="vid-info">
-                            <h3>Video Title</h3>
-                            <div class="flex-row space-between">
-                                <h4 class="content-creator">Content Creator</h4>
-                                <h5>Time</h5>
-                            </div>
-                        </div>
-                        <div class="fade-bottom"></div>     
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="swiper-button-next next2"></div>
-            <div class="swiper-button-prev prev2"></div>
-            <div class="fade-right-minor"></div>
-        </section>
 
         <footer class="flex-col">
             <section class="flex-row major-v-padding footer-top-row">
