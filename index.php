@@ -15,11 +15,11 @@
         <!-- Materialize Carousel -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!-- Swiper Carousel -->
-        <link rel="stylesheet" href="swiper-bundle.min.css">
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css">
         <!-- Fonts -->
         <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" id="avia-google-webfont">
         <!-- Styles -->
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <title>OFTV</title>
     </head>
 
@@ -30,7 +30,7 @@
             <nav id="pc-header" class="flex-row">
                 <section>
                     <ul class="flex-row">
-                        <li><a href="https://of.tv/"><img class="icon" src="oftvIcon.png" alt="OF.TV Icon"></a></li>
+                        <li><a href="https://of.tv/"><img class="icon" src="/images/oftvIcon.png" alt="OF.TV Icon"></a></li>
                         <li><a class="home" href="#top">Home</a></li>
                         <li><a href="https://of.tv/creators/">Creators</a></li>
                         <li><a href="https://of.tv/download/">Get the app</a></li>
@@ -58,7 +58,7 @@
                     </label>
                 
                     <nav class="menu1">
-                        <a href="https://of.tv/"><img class="icon" src="oftvIcon.png" alt="OF.TV Icon"></a>
+                        <a href="https://of.tv/"><img class="icon" src="images/oftvIcon.png" alt="OF.TV Icon"></a>
                         <a class="link1" href="#top">Home</a>
                         <a class="link1" href="https://of.tv/creators/">Creators</a>
                         <a class="link1" href="https://of.tv/download/">Get the app</a>
@@ -240,7 +240,7 @@
         <footer class="flex-col">
             <section class="flex-row major-v-padding footer-top-row">
                 <section class="flex-col">
-                    <a href="https://of.tv/"><img class="icon" src="oftvIcon.png" alt="OF.TV Icon">
+                    <a href="https://of.tv/"><img class="icon" src="/images/oftvIcon.png" alt="OF.TV Icon">
                     <a href="#"><span>Follow us!</span></a>
                 </section>
                 <section class="flex-col center">
@@ -267,8 +267,8 @@
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <!-- Swiper JS -->
-        <script src="swiper-bundle.min.js"></script>
+        <script src="./js/swiper-bundle.min.js"></script>
         <!-- Other JS -->
-        <script src="script.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>

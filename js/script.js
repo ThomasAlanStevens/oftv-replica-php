@@ -63,7 +63,6 @@ function darkMode(){
 document.querySelectorAll('iframe').forEach(iframe => iframe.addEventListener('mouseenter', playVideo))
 
 function playVideo(){
-    console.log(this)
     this.src = this.src.replace('&autoplay=0', '&autoplay=1')
     
 }
@@ -92,7 +91,6 @@ function onYouTubeIframeAPIReady() {
                 'onReady': onPlayerReady
             }
         });
-        console.log(videos)
     }
 }
 
