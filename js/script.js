@@ -59,7 +59,7 @@ function darkMode(){
     document.querySelector('header').classList.toggle("dark-mode");
 }
 
-// Autoplay muted video on mouse hover using youtube api
+// Autoplay muted video on mouse hover
 document.querySelectorAll('iframe').forEach(iframe => iframe.addEventListener('mouseenter', playVideo))
 
 function playVideo(){
@@ -96,7 +96,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
     for(let i = 0; i < players.length; i++){
-        players[i].mute()
+        players[i].mute();
     }
 }
 

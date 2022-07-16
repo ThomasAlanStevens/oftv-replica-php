@@ -27,6 +27,7 @@
 
         <!-- OF.TV Header -->
         <header id="top">
+            <!-- Regular Header -->
             <nav id="pc-header" class="flex-row">
                 <section>
                     <ul class="flex-row">
@@ -48,6 +49,8 @@
                     </ul>
                 </section>
             </nav>
+
+            <!-- Hamburger Header For Smaller Devices -->
             <section class="p-menu1">
                 <nav id="navbar" class="navigation" role="navigation">
                     <input id="toggle1" type="checkbox" />
@@ -71,7 +74,7 @@
             </section>
         </header>
 
-        <!-- Main Video Display Using Materialize-->
+        <!-- Main Video Display Carousel Using Materialize-->
         <main>
             <div class="fade-left"></div>
             <section id="carousel" class="carousel">
@@ -102,8 +105,7 @@
             <button class="carousel-button next" data-carousel-button-next>></button>
         </main>
 
-        <!-- Swiper Categories Video Display Section -->
-        
+        <!--Categories Video Display Carousels Using Swiper -->
         <section class="swiper-container">
             <h2 class="category"><a href="https://of.tv/">Bo Burnham</a></h2>
             <div class="swiper mySwiper">
@@ -236,7 +238,7 @@
             <div class="fade-right-minor"></div>
         </section>
 
-
+        <!-- Footer -->
         <footer class="flex-col">
             <section class="flex-row major-v-padding footer-top-row">
                 <section class="flex-col">
@@ -263,6 +265,7 @@
             <small>©2022 OFTV | <a href="">Privacy Policy</a></small>
         </footer>
     
+        <!-- Scripts -->
         <!-- Materialize JS -->
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -271,4 +274,5 @@
         <!-- Other JS -->
         <script src="./js/script.js"></script>
     </body>
+    
 </html>
