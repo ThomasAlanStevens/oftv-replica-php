@@ -27,7 +27,7 @@
 
         <!-- OF.TV Header -->
         <header id="top">
-            <nav class="flex-row">
+            <nav id="pc-header" class="flex-row">
                 <section>
                     <ul class="flex-row">
                         <li><a href="https://of.tv/"><img class="icon" src="oftvIcon.png" alt="OF.TV Icon"></a></li>
@@ -48,6 +48,27 @@
                     </ul>
                 </section>
             </nav>
+            <section class="p-menu1">
+                <nav id="navbar" class="navigation" role="navigation">
+                    <input id="toggle1" type="checkbox" />
+                    <label class="hamburger1" for="toggle1">
+                    <div class="top"></div>
+                    <div class="meat"></div>
+                    <div class="bottom"></div>
+                    </label>
+                
+                    <nav class="menu1">
+                        <a href="https://of.tv/"><img class="icon" src="oftvIcon.png" alt="OF.TV Icon"></a>
+                        <a class="link1" href="#top">Home</a>
+                        <a class="link1" href="https://of.tv/creators/">Creators</a>
+                        <a class="link1" href="https://of.tv/download/">Get the app</a>
+                        <form class="flex-row link1" action="#" id="searchform" method="get">
+                            <input type="text" id="search" name="search" placeholder="Search">
+                            <button class="search-button"><i class="fa fa-search"></i></button>
+                        </form>
+                    </nav>
+                </nav>
+            </section>
         </header>
 
         <!-- Main Video Display Using Materialize-->
@@ -66,7 +87,7 @@
                                     <iframe width=\"560\" height=\"315\" src=\"$row[link]\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
                                 </figure>
                             </a>
-                            <div>
+                            <div class=\"main-info\">
                                 <a href=\"$row[channel]\"><img src=\"$row[icon]\" alt=\"\"></a>
                                 <a href=\"$row[watch]\"><h3>$row[title]</h3></a>
                                 <a href=\"$row[channel]\"><h4>$row[creator]</h4></a>
