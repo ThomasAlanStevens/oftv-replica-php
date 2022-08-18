@@ -1,5 +1,5 @@
 <?php
-    include_once 'db.php'
+    include_once './includes/db.php'
 ?>
 
 <!DOCTYPE html>
@@ -31,10 +31,11 @@
             <nav id="pc-header" class="flex-row">
                 <section>
                     <ul class="flex-row">
-                        <li><a href="https://of.tv/"><img class="icon" src="/images/oftvIcon.png" alt="OF.TV Icon"></a></li>
-                        <li><a class="home" href="#top">Home</a></li>
+                        <li><a href="index.php"><img class="icon" src="/images/oftvIcon.png" alt="OF.TV Icon"></a></li>
+                        <li><a class="home" href="index">Home</a></li>
                         <li><a href="https://of.tv/creators/">Creators</a></li>
                         <li><a href="https://of.tv/download/">Get the app</a></li>
+                        <li><a href="submitVideo.php">Submit Video</a></li>
                     </ul>
                 </section>
                 <section>
@@ -174,7 +175,7 @@
 
         <section class="swiper-container">
             <h2 class="category"><a href="https://of.tv/">Comedy</a></h2>
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper ">
                 <div class="fade-left-minor"></div>
                 <div class="swiper-wrapper">
                     <?php
