@@ -19,7 +19,7 @@
         <!-- Fonts -->
         <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" id="avia-google-webfont">
         <!-- Styles -->
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
         <title>OFTV</title>
     </head>
 
@@ -75,9 +75,9 @@
             </section>
         </header>
 
-      <section className="crud-video">
+      <section class="crud-video">
         <h1>Add Video</h1>
-        <form className="crud-video-form" action="./includes/addVideo.php" method="POST">
+        <form class="crud-video-form" action="./includes/addVideo.php" method="POST">
           <label>
             Video Title
             <input
@@ -126,7 +126,48 @@
               placeholder="Unique Video Link"
             />
           </label>
-          <input className="submit-button" type="submit" value="submit" />
+          <input class="submit-button" type="submit" value="submit" />
+        </form>
+
+        <h1>Update Video</h1>
+        <form class="crud-video-form" action="./includes/updateVideo.php" method="POST">
+          <label>
+            Video Title
+            <input
+              type="text"
+              name="title"
+              placeholder="Title"
+            />
+          <label>
+            Video Categories
+            <input
+              type="text"
+              name="categories"
+              placeholder="Categories"
+            />
+          </label>
+          <label>
+            Youtube Video Link
+            <input
+              type="text"
+              name="watch"
+              placeholder="Unique Video Link"
+            />
+          </label>
+          <input class="submit-button" type="submit" value="update" name='update'/>
+        </form>
+
+        <h1>Delete Video</h1>
+        <form class="crud-video-form" action="./includes/deleteVideo.php" method="POST">
+          <label>
+            Youtube Video Link
+            <input
+              type="text"
+              name="watch"
+              placeholder="Unique Video Link"
+            />
+          </label>
+          <input class="submit-button" type="submit" value="delete" name='delete'/>
         </form>
       </section>
 

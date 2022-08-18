@@ -25,4 +25,4 @@
     $sql = "INSERT INTO video_info (title, creator, channel, link, watch, thumbnail, icon, categories) VALUES ('$title', '$creator', '$channel', '$link', '$watch', '$thumbnail', '$icon', '$categories' );";
     mysqli_query($conn, $sql);
 
-    header("Location: ../index.php?addedVideo=success");
+    header("Location: ../submitVideo.php?addedVideo=success");
